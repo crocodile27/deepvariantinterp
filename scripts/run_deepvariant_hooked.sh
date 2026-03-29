@@ -77,7 +77,8 @@ REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 INTERMEDIATE_DIR="${OUTPUT_DIR}/intermediate_results_dir"
 ACTIVATION_CACHE_DIR="${OUTPUT_DIR}/activation_cache"
 EXAMPLES="${INTERMEDIATE_DIR}/make_examples.tfrecord@${NUM_SHARDS}.gz"
-CVO_OUTPUT="${INTERMEDIATE_DIR}/call_variants_output.tfrecord.gz"
+CVO_OUTPUT="${INTERMEDIATE_DIR}/call_variants_output-00000-of-00001.tfrecord.gz"
+CVO_SPEC="${INTERMEDIATE_DIR}/call_variants_output@${NUM_SHARDS}.tfrecord.gz"
 OUTPUT_VCF="${OUTPUT_DIR}/output.vcf.gz"
 OUTPUT_GVCF="${OUTPUT_DIR}/output.g.vcf.gz"
 
@@ -102,9 +103,14 @@ echo "========================================"
 echo ""
 echo "=== Step 1/3: make_examples (singularity) ==="
 
+INPUT_DIR="$(dirname "${REF}")"
+
 MAKE_EXAMPLES_CMD=(
-  singularity run -B /usr/lib/locale/:/usr/lib/locale/
-  "docker://google/deepvariant:${BIN_VERSION}"
+  docker run
+  -v /usr/lib/locale/:/usr/lib/locale/
+  -v "${INPUT_DIR}:${INPUT_DIR}"
+  -v "${OUTPUT_DIR}:${OUTPUT_DIR}"
+  "google/deepvariant:${BIN_VERSION}"
   /opt/deepvariant/bin/make_examples
   --mode calling
   --ref "${REF}"
@@ -144,13 +150,15 @@ echo "Activations cached to: ${ACTIVATION_CACHE_DIR}"
 echo ""
 echo "=== Step 3/3: postprocess_variants (singularity) ==="
 
-singularity run -B /usr/lib/locale/:/usr/lib/locale/ \
-  "docker://google/deepvariant:${BIN_VERSION}" \
+docker run \
+  -v /usr/lib/locale/:/usr/lib/locale/ \
+  -v "${INPUT_DIR}:${INPUT_DIR}" \
+  -v "${OUTPUT_DIR}:${OUTPUT_DIR}" \
+  "google/deepvariant:${BIN_VERSION}" \
   /opt/deepvariant/bin/postprocess_variants \
   --ref "${REF}" \
-  --infile "${CVO_OUTPUT}" \
-  --outfile "${OUTPUT_VCF}" \
-  --gvcf_outfile "${OUTPUT_GVCF}"
+  --infile "${CVO_SPEC}" \
+  --outfile "${OUTPUT_VCF}"
 
 echo "postprocess_variants complete."
 
