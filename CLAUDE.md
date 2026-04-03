@@ -35,11 +35,17 @@ Required packages beyond the defaults:
 - `tensorflow==2.13.0` (2.12 is missing `tf.keras.metrics.F1Score`)
 - `ml_collections`
 - `etils`
+- `umap-learn`, `matplotlib`, `scikit-learn` (for `plotting/umap_activations.py`)
 
-Install all at once:
+Install pipeline deps:
 ```bash
 conda activate deepVariant
 pip install "tensorflow==2.13.0" ml_collections etils
+```
+
+Install UMAP/plotting deps (must use conda — pip fails to build `llvmlite` from source):
+```bash
+conda install -n deepVariant -c conda-forge umap-learn matplotlib scikit-learn -y
 ```
 
 ## Proto Compilation

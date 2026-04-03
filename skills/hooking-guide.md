@@ -130,6 +130,12 @@ print(activation_hooks.list_hookable_layers(model))
 
 ## Visualizing Activations with UMAP
 
+Install plotting deps first (must use conda — pip fails to build `llvmlite` from source):
+
+```bash
+conda install -n deepVariant -c conda-forge umap-learn matplotlib scikit-learn -y
+```
+
 ```bash
 python plotting/umap_activations.py \
   --cache_dir quickstart-output/activation_cache \
