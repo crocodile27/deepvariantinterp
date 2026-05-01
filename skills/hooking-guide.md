@@ -1,5 +1,10 @@
 # Activation Hooking Guide
 
+> For the ancestry embedding analysis pipeline (BAM download → embedding extraction → PCA/UMAP),
+> see [Data: Ancestry Embedding Dataset](#data-ancestry-embedding-dataset) below.
+
+
+
 DeepVariant's standard pipeline discards intermediate layer activations after calling variants. This repo replaces Step 2 (`call_variants`) with a hooked version that captures those activations and saves them to disk alongside the normal VCF output.
 
 ## How It Works
@@ -203,3 +208,60 @@ Input pileup image (100 × 221 × 7 channels)
 ```
 
 The 7 input channels encode: read base, base quality, mapping quality, strand, read supports variant, base differs from ref, and insert size.
+
+---
+
+## Data: Ancestry Embedding Dataset
+
+### Source
+`gs://brain-genomics-public/research/cohort/1KGP/grch37_bams/`
+
+NYGC 30x 1KGP phase 3 cohort (2,504 samples), remapped to **GRCh37/hs37d5**.
+All samples at matched ~30x depth — eliminates the coverage confound vs. GRCh38.
+Reference uses **bare contig names** (`20`, not `chr20`).
+
+### 13 Active Samples (for joint analysis)
+
+The joint analysis uses 13 samples. NA19238 and HG03022 were excluded to match the collaborating lab's GRCh38 set.
+
+| Sample  | Superpop | Pop | ERR accession | Notes |
+|---------|----------|-----|---------------|-------|
+| HG01985 | AFR | ACB | ERR3242296 | replaces NA19240 (was child of NA19238) |
+| HG02922 | AFR | ESN | ERR3242482 | |
+| HG01048 | AMR | PUR | ERR3241761 | |
+| HG01197 | AMR | PUR | ERR3241854 | |
+| HG01565 | AMR | PEL | ERR3241984 | |
+| HG00759 | EAS | CDX | ERR3242128 | replaces HG00514 (absent from cohort) |
+| NA18939 | EAS | JPT | ERR3239557 | |
+| HG00864 | EAS | CDX | ERR3242132 | |
+| NA12878 | EUR | CEU | ERR3239334 | |
+| HG00731 | EUR | PUR | ERR3241754 | |
+| NA20502 | EUR | TSI | ERR3239785 | |
+| HG03009 | SAS | BEB | ERR3242842 | replaces HG03732 (absent from cohort) |
+| NA20847 | SAS | GIH | ERR3239999 | |
+
+Excluded: NA19238 (AFR/YRI) and HG03022 (SAS/PJL). Relatedness verified via `20130606_g1k.ped`.
+
+### Running the Full Ancestry Pipeline
+
+```bash
+cd ~/Documents/Code/deepvariantinterp
+conda activate deepVariant
+
+# Full pipeline: preflight → download BAMs → extract embeddings → PCA/UMAP
+python orchestrate_ancestry_embeddings.py
+
+# Download only
+python orchestrate_ancestry_embeddings.py --samples-only
+
+# Skip download (BAMs already on disk), run embedding + analysis
+python orchestrate_ancestry_embeddings.py --skip-download
+
+# Custom region (bare contig for GRCh37)
+python orchestrate_ancestry_embeddings.py --region 20:10000000-10100000
+```
+
+### GCS Path Pattern
+```
+gs://brain-genomics-public/research/cohort/1KGP/grch37_bams/ERR<run>_<sample>.grch37.bam
+```

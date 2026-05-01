@@ -10,3 +10,17 @@
 bazel-*
 
 **/.ipynb_checkpoints
+
+# macOS metadata
+.DS_Store
+
+# Large data / generated outputs
+data/
+model/
+giab_truth/
+logs/
+results/
+quickstart-*/
+
+# Local Claude Code settings
+.claude/
