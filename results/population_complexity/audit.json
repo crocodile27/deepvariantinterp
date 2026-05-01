@@ -1,0 +1,77 @@
+{
+  "usable": [
+    {
+      "sample_id": "HG00731",
+      "population": "GBR",
+      "superpopulation": "EUR",
+      "n_sites": 307
+    },
+    {
+      "sample_id": "NA20502",
+      "population": "TSI",
+      "superpopulation": "EUR",
+      "n_sites": 373
+    },
+    {
+      "sample_id": "HG01985",
+      "population": "LWK",
+      "superpopulation": "AFR",
+      "n_sites": 427
+    },
+    {
+      "sample_id": "HG02922",
+      "population": "LWK",
+      "superpopulation": "AFR",
+      "n_sites": 381
+    },
+    {
+      "sample_id": "HG01048",
+      "population": "CLM",
+      "superpopulation": "AMR",
+      "n_sites": 390
+    },
+    {
+      "sample_id": "HG01197",
+      "population": "CLM",
+      "superpopulation": "AMR",
+      "n_sites": 336
+    },
+    {
+      "sample_id": "HG01565",
+      "population": "PEL",
+      "superpopulation": "AMR",
+      "n_sites": 380
+    },
+    {
+      "sample_id": "HG00759",
+      "population": "CHS",
+      "superpopulation": "EAS",
+      "n_sites": 384
+    },
+    {
+      "sample_id": "NA18939",
+      "population": "JPT",
+      "superpopulation": "EAS",
+      "n_sites": 359
+    },
+    {
+      "sample_id": "HG00864",
+      "population": "CDX",
+      "superpopulation": "EAS",
+      "n_sites": 348
+    },
+    {
+      "sample_id": "HG03009",
+      "population": "GIH",
+      "superpopulation": "SAS",
+      "n_sites": 329
+    },
+    {
+      "sample_id": "NA20847",
+      "population": "GIH",
+      "superpopulation": "SAS",
+      "n_sites": 412
+    }
+  ],
+  "skipped": []
+}

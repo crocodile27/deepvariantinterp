@@ -1,0 +1,42 @@
+{
+  "kruskal_wallis": {
+    "H": 12.671142615537624,
+    "p": 0.012999608838701718
+  },
+  "pairwise_vs_eur": {
+    "AFR": {
+      "U": 413230.0,
+      "p_raw": 0.8327433091091069,
+      "p_bonferroni": 1.0,
+      "cohens_d": 0.02900007228499385
+    },
+    "AMR": {
+      "U": 558956.0,
+      "p_raw": 0.8071386865619778,
+      "p_bonferroni": 1.0,
+      "cohens_d": -0.0233078023694775
+    },
+    "EAS": {
+      "U": 515590.0,
+      "p_raw": 0.005017125507177077,
+      "p_bonferroni": 0.02006850202870831,
+      "cohens_d": -0.13547914915497583
+    },
+    "SAS": {
+      "U": 377987.0,
+      "p_raw": 0.9100045351912991,
+      "p_bonferroni": 1.0,
+      "cohens_d": 0.0058007208329548384
+    }
+  },
+  "n_per_superpop": {
+    "EUR": 1017,
+    "AFR": 808,
+    "AMR": 1106,
+    "EAS": 1091,
+    "SAS": 741
+  },
+  "underpowered_superpops": [],
+  "eur_includes_na12878": true,
+  "n_comparisons_bonferroni": 4
+}

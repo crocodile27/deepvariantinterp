@@ -1,0 +1,29 @@
+{
+  "n_sites": 337,
+  "label_counts": {
+    "TP": 197,
+    "FP": 0,
+    "FN": 0,
+    "UNK": 140,
+    ".": 0
+  },
+  "pca_variance_explained_pct": [
+    17.71,
+    14.17,
+    8.1,
+    6.39,
+    3.48
+  ],
+  "centroid_distances_pca": {
+    "TP-UNK": 16.6946
+  },
+  "pc1_means_by_label": {
+    "TP": 2.4485,
+    "UNK": -3.4454
+  },
+  "plots": [
+    "/Users/antheaguo/Documents/Code/deepvariantinterp/results/giab_validation/NA12878_pca_by_giab_label.png",
+    "/Users/antheaguo/Documents/Code/deepvariantinterp/results/giab_validation/NA12878_umap_by_giab_label.png"
+  ],
+  "interpretation_note": "If TP and FP centroids are well-separated, mixed5 encodes call confidence geometrically. If not, confidence information lives in deeper layers."
+}

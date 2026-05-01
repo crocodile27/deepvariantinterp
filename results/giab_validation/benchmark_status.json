@@ -1,0 +1,6 @@
+{
+  "status": "success",
+  "summary_csv": "results/giab_validation/happy_results.summary.csv",
+  "labeled_vcf": "results/giab_validation/happy_results.vcf.gz",
+  "error": null
+}

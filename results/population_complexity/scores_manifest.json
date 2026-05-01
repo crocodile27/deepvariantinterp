@@ -1,0 +1,93 @@
+{
+  "NA12878": {
+    "superpop": "EUR",
+    "population": "CEU",
+    "n_sites": 337,
+    "mean_score": -2.682400369744094e-09,
+    "std_score": 9.497893608403446
+  },
+  "HG00731": {
+    "superpop": "EUR",
+    "population": "GBR",
+    "n_sites": 307,
+    "mean_score": -0.6599845116967372,
+    "std_score": 8.872603135277583
+  },
+  "NA20502": {
+    "superpop": "EUR",
+    "population": "TSI",
+    "n_sites": 373,
+    "mean_score": 0.3464579138038181,
+    "std_score": 8.650756518290917
+  },
+  "HG01985": {
+    "superpop": "AFR",
+    "population": "LWK",
+    "n_sites": 427,
+    "mean_score": 0.3160364538424606,
+    "std_score": 8.266040540893178
+  },
+  "HG02922": {
+    "superpop": "AFR",
+    "population": "LWK",
+    "n_sites": 381,
+    "mean_score": 0.03358865737662665,
+    "std_score": 8.88791658559428
+  },
+  "HG01048": {
+    "superpop": "AMR",
+    "population": "CLM",
+    "n_sites": 390,
+    "mean_score": 0.730614543820233,
+    "std_score": 9.163460664592554
+  },
+  "HG01197": {
+    "superpop": "AMR",
+    "population": "CLM",
+    "n_sites": 336,
+    "mean_score": -1.1601359945700993,
+    "std_score": 9.450778700731183
+  },
+  "HG01565": {
+    "superpop": "AMR",
+    "population": "PEL",
+    "n_sites": 380,
+    "mean_score": -0.5590530482603294,
+    "std_score": 9.51713955558803
+  },
+  "HG00759": {
+    "superpop": "EAS",
+    "population": "CHS",
+    "n_sites": 384,
+    "mean_score": -2.331798511771668,
+    "std_score": 9.525117044467288
+  },
+  "NA18939": {
+    "superpop": "EAS",
+    "population": "JPT",
+    "n_sites": 359,
+    "mean_score": -0.3804275885288432,
+    "std_score": 9.518992813823017
+  },
+  "HG00864": {
+    "superpop": "EAS",
+    "population": "CDX",
+    "n_sites": 348,
+    "mean_score": -1.2274986277728734,
+    "std_score": 9.821659586705474
+  },
+  "HG03009": {
+    "superpop": "SAS",
+    "population": "GIH",
+    "n_sites": 329,
+    "mean_score": -0.12278441530748481,
+    "std_score": 8.791234765406873
+  },
+  "NA20847": {
+    "superpop": "SAS",
+    "population": "GIH",
+    "n_sites": 412,
+    "mean_score": 0.06175250960989711,
+    "std_score": 8.99570007875323
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "n_samples": 15,
+  "superpops_present": [
+    "AFR",
+    "AMR",
+    "EAS",
+    "EUR",
+    "SAS"
+  ],
+  "n_sites_total": 5449,
+  "embedding_dim": 768,
+  "pca_variance_explained_top5": [
+    0.188046,
+    0.137041,
+    0.066531,
+    0.044148,
+    0.04084
+  ],
+  "umap_silhouette_score": -0.0512,
+  "clustering_observed": false
+}

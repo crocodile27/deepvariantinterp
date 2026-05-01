@@ -1,0 +1,9 @@
+{
+  "HG00759_mean": -2.331798511771668,
+  "HG00759_pct_below_zero": 53.90625,
+  "HG00759_pct_below_minus10": 32.03125,
+  "NA18939_mean": -0.3804275885288432,
+  "HG00864_mean": -1.2274986277728734,
+  "NA12878_mean": -2.682400369744094e-09,
+  "note": "positions are synthetic (site_000000...) \u2014 no genomic coords"
+}

@@ -1,0 +1,18 @@
+{
+  "validator_auroc_mean": 0.9943589743589744,
+  "validator_auroc_std": 0.0074766674052325725,
+  "validator_auroc_folds": [
+    0.9982142857142857,
+    0.994642857142857,
+    1.0,
+    0.9990842490842491,
+    0.9798534798534799
+  ],
+  "validator_null_mean": 0.5067707875457876,
+  "validator_p_value": 0.0,
+  "original_auroc_mean": 0.9943589743589744,
+  "auroc_delta": 0.0,
+  "discrepancies": [],
+  "verdict": "PASS",
+  "notes": "All statistics reproduced within tolerance."
+}

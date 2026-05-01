@@ -1,0 +1,20 @@
+{
+  "root_cause": "genuine_biology",
+  "evidence": {
+    "mean_coverage": 35.1335,
+    "coverage_pct": 99.897,
+    "meanmapq": 59.8,
+    "low_mapq_fraction": 0.0027954256670902162,
+    "softclip_rate": 0.0,
+    "mapq_issue": false,
+    "discordant_pairs": 5,
+    "insert_size_delta": 0.0,
+    "sv_suspected": false,
+    "dead_channels_hg00759": 0,
+    "dead_channels_na12878": 0,
+    "embedding_anomaly": false
+  },
+  "recommendation": "keep",
+  "rerun_population_stats_without_hg00759": false,
+  "notes": "No pipeline artifacts found. HG00759 mean score is uniformly lower across all sites. Coverage, mapq, and insert sizes are comparable to EUR reference. Embedding differences in top probe channels confirm a real representational difference. HG00759 top-20 channel mean: 0.2908 vs NA12878: 0.2892, NA18939: 0.2881."
+}

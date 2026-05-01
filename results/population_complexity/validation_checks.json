@@ -1,0 +1,37 @@
+{
+  "na12878_score_direction": {
+    "tp_mean": 7.506134400010489,
+    "unk_mean": -10.562203412185967,
+    "status": "PASS",
+    "description": "TP mean=7.506 (expected >0), UNK mean=-10.562 (expected <0)"
+  },
+  "score_range": {
+    "expected_range": [
+      -24.869889164338346,
+      22.04472448837934
+    ],
+    "issues": [],
+    "status": "PASS",
+    "description": "NA12878 range [-19.87, 17.04]; tolerance \u00b15"
+  },
+  "superpop_mean_ordering": {
+    "eur_mean": -0.07215972875717121,
+    "eur_std": 9.01520762368345,
+    "superpop_means": {
+      "EUR": -0.07215972875717121,
+      "AFR": 0.1828525300138927,
+      "AMR": -0.28689528067322584,
+      "EAS": -1.337446063489583,
+      "SAS": -0.020180888902678742
+    },
+    "implausible": [],
+    "status": "PASS"
+  },
+  "ch604_spotcheck": {
+    "lowest_mean_sample": "HG00759",
+    "ch604_lowest": 0.32715171575546265,
+    "ch604_na12878": 0.41369253396987915,
+    "status": "PASS",
+    "description": "HG00759 ch604=0.3272, NA12878 ch604=0.4137"
+  }
+}

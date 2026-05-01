@@ -1,0 +1,34 @@
+{
+  "HG00759": {
+    "numreads": 23596,
+    "covbases": 99898,
+    "coverage_pct": 99.897,
+    "meandepth": 35.1335,
+    "meanbaseq": 29.6,
+    "meanmapq": 59.8
+  },
+  "NA18939": {
+    "numreads": 22822,
+    "covbases": 99991,
+    "coverage_pct": 99.99,
+    "meandepth": 34.0104,
+    "meanbaseq": 29.6,
+    "meanmapq": 59.8
+  },
+  "HG00864": {
+    "numreads": 24762,
+    "covbases": 99960,
+    "coverage_pct": 99.959,
+    "meandepth": 36.934,
+    "meanbaseq": 29.6,
+    "meanmapq": 59.8
+  },
+  "NA12878": {
+    "numreads": 23733,
+    "covbases": 100001,
+    "coverage_pct": 100.0,
+    "meandepth": 35.4051,
+    "meanbaseq": 29.6,
+    "meanmapq": 59.8
+  }
+}
